@@ -33,6 +33,7 @@ namespace AzureTableStorage
         }
         private static void CreateAzureStorageTable()
         {
+            int i;
             Console.WriteLine("in creation of azure");
             storageAccount = CloudStorageAccount.Parse(CloudConfigurationManager.GetSetting("StorageConnectionString"));
             tableClient = storageAccount.CreateCloudTableClient();
